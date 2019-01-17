@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
-import './productManager.dart';
+import 'pages/homePage.dart';
 
 void main() {
   /*
@@ -10,6 +11,7 @@ void main() {
   //this show pointer when click on any component
   debugPaintPointersEnabled = true;
  */
+
   runApp(MyApp());
 }
 
@@ -22,10 +24,7 @@ class MyApp extends StatelessWidget {
 //        debugShowMaterialGrid: true,
         debugShowCheckedModeBanner: false,
         theme: ThemeData(brightness: Brightness.dark),
-        home: Scaffold(
-            appBar: AppBar(
-              title: Text("EasyList"),
-            ),
-            body: ProductManager()));
+        home: HomePage()
+    );
   }
 }
